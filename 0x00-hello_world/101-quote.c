@@ -1,11 +1,18 @@
 #include <stdio.h>
 
-#include <stdlib.h>
+#include <unistd.h>
+
 /*
  *
- *main - Entry point
+ *main - Entry Point
  *
- *Return: Always 1 (Success)
+ *
+ *
+ *Description: prints a string to the standard error
+ *
+ *
+ *
+ * Return: Always 1(Error)
  *
  */
 
@@ -13,7 +20,12 @@ int main(void)
 
 {
 
-write(STDOUT_FILENO, "and that piece of art is useful
-\" - Dora Korpar, 2015-10-19\n", 59);
-return (1);
+char err[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2,  err, 59);
+
+	return (1);
+
+
+
 }
