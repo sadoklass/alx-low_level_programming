@@ -2,15 +2,12 @@
 
 
 
-/*
- *
-  main - Entry point
- *
- * Description: main is a function
- * Return: Always 0 (Success)
- *
- */
 
+/**
+ ** main - Entry point
+ *
+ * Return: Always 0 (Success)
+*/
 int main(void)
 
 {
