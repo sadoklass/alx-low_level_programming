@@ -4,7 +4,7 @@
 
 /*
  *
- * main - Entry point
+  main - Entry point
  *
  * Description: main is a function
  * Return: Always 0 (Success)
