@@ -26,16 +26,14 @@ while (s[i] != '\0')
 {
 if (s[i] == '-')
 sign *= -1;
+
 if (s[i] >= '0' && s[i] <= '9')
 {
-																	while (s[i] >= '0' && s[i] <= '9')
-
-																	{
-
-																	numb = (s[i] - '0') * sign + numb * 10;
-																	i++;
-
-																	}
+while (s[i] >= '0' && s[i] <= '9')
+{
+numb = (s[i] - '0') * sign + numb * 10;
+i++;
+}
 																	break;
 																	}
 i++;
