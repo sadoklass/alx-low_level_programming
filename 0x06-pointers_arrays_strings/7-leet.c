@@ -18,11 +18,12 @@ int i, j;
 for (i = 0; z[i] != '\0'; i++)
 {
 for (j = 0; arr[j] != '\0'; j++)
-{
 
+{
 if (z[i] == arr[j])
-																	z[i] = replace[j / 2];
-																	}
+z[i] = replace[j / 2];
+}
+
 }
 return (z);
 }
