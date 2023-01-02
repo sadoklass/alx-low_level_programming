@@ -1,15 +1,15 @@
 include "main.h"
 
 /**
- * _memset - fill memory .
+ * _memset - fills memory with a constant byte.
  *
- * @s: pointer
+ * @s: source string
  *
- * @b: hexadecimal number
+ * @b: the contant byte for filling
  *
- * @n: n bytes
+ * @n: lenght of buffer
  *
- * Return: pointer
+ * Return: new string.
  *
  */
 
@@ -17,11 +17,14 @@ char *_memset(char *s, char b, unsigned int n)
 
 {
 
-unsigned char *u = (unsigned char *) s;
+unsigned int i = 0;
 
-while (n-- > 0x00)
+while (i < n)
+
 {
-*u++ = b;
+*(s + i) = b;
+i++;
+
 }
 return (s);
 }
