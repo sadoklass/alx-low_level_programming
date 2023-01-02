@@ -24,8 +24,8 @@ for (j = 0; *(accept + j); j++)
 {
 if (*(s + i) == *(accept + j))
 {
-																	break;
-																	}
+break;
+}
 }
 if (*(accept + j) != '\0')
 {
