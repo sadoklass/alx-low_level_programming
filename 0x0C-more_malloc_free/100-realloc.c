@@ -1,52 +1,71 @@
 #include <stdlib.h>
 
-#include <stdio.h>
 
-#include "main.h"
 
 /**
- * _realloc - reallocates old to new, set conditions from problem
+ * _memcpy - Copy n bytes from memory area src to memory area dest
  *
- * returning dest w/ size of malloc new_size, set src as ptr
+ * @dest: Memory area to copy to
  *
- * @ptr: pointer to memory prev alloc, must free end
+ * @src: Memory area to copy from
  *
- * @old_size: input old
+ * @n: Amount to copy from memory area
  *
- * @new_size: input new
+ * Return: Pointer to area
  *
- * Return: 0
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+
+{
+unsigned int i;
+i = 0;
+while (i < n)
+{
+dest[i] = src[i];
+i++;
+}
+return (dest);
+}
+
+/**
+ * _realloc - Reallocate a memory block using malloc
+ *
+ * @ptr: Old memory block
+ *
+ * @old_size: Size of of old memory block
+ *
+ * @new_size: Size the new memory block should be
+ *
+ * Return: Pointer to new memory space, NULL if it fails
  *
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 {
-
-char *dest, *src;
-unsigned int i;
+void *nptr;
+unsigned int min;
+if (ptr == NULL)
+{
+nptr = malloc(new_size);
+return (nptr);
+}
+if (ptr != NULL && new_size == 0)
+{
+free(ptr);
+return (NULL);
+}
 if (new_size == old_size)
 return (ptr);
-if (ptr == NULL)
-{
-ptr = malloc(new_size);
-if (ptr == NULL)
-{
+if (new_size < old_size)
+min = new_size;
+else
+min = old_size;
+nptr = malloc(new_size);
+if (nptr == NULL)
 return (NULL);
-}
-return (ptr);
-}
-if (new_size == 0 && ptr != NULL)
-{
+nptr = _memcpy(nptr, ptr, min);
 free(ptr);
-return (NULL);
-}
-dest = malloc(new_size);
-if (dest == NULL)
-return (NULL);
-src = ptr;
-for (i = 0; i < new_size && i < old_size; i++)
-est[i] = src[i];
-free(ptr);
-return (dest);
+return (nptr);
 }
