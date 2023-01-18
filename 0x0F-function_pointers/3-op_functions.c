@@ -39,7 +39,6 @@ return (a - b);
 }
 
 /**
- *
  * op_mul - multiply
  *
  * @a: first operand
