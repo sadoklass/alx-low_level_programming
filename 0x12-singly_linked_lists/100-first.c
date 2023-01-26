@@ -1,13 +1,21 @@
 #include <stdio.h>
 
+#include <stdlib.h>
+
+#include <string.h>
+
+#include "lists.h"
+
+
+
 /**
- * b - prints from init by the loader before main
+ * print_before - prints a string before main function is executed
+ *
+ * Return: void
  *
  */
 
-void b(void) __attribute__ ((constructor));
-
-void b(void)
+void print_before(void)
 
 {
 printf("You're beat! and yet, you must allow,\n");
