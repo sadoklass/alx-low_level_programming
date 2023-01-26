@@ -1,8 +1,6 @@
-#ifndef LIST_H
+#ifndef LISTS_H
 
-#define LIST_H
-
-#include <stddef.h>
+#define LISTS_H
 
 /**
  * struct list_s - singly linked list
@@ -15,17 +13,22 @@
  *
  * Description: singly linked list node structure
  *
- * for Holberton project
+ * for ALX project
  *
  */
 
 typedef struct list_s
 
 {
+
 char *str;
 unsigned int len;
 struct list_s *next;
 } list_t;
+
+int _putchar(char c);
+
+int _strlen(const char *s);
 
 size_t print_list(const list_t *h);
 
@@ -37,6 +40,6 @@ list_t *add_node_end(list_t **head, const char *str);
 
 void free_list(list_t *head);
 
-int _putchar(char c);
+void print_before(void) __attribute__ ((constructor));
 
-#endif
+#endif /* LISTS_H */
