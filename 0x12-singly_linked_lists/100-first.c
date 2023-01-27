@@ -1,21 +1,19 @@
 #include <stdio.h>
 
-#include <stdlib.h>
 
-#include <string.h>
 
-#include "lists.h"
+void first(void) __attribute__ ((constructor));
 
 
 
 /**
- * print_before - prints a string before main function is executed
+ * first - ...
  *
- * Return: void
+ * Return: Nothing.
  *
  */
 
-void print_before(void)
+void first(void)
 
 {
 printf("You're beat! and yet, you must allow,\n");
