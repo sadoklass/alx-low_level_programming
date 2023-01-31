@@ -22,7 +22,7 @@ while (ptr->next != second)
 {
 prev = ptr;
 ptr = ptr->next;
-}	
+}
 if (prev != NULL)
 prev->next = first;
 second = first->next;

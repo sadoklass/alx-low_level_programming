@@ -5,7 +5,6 @@
 #include <stddef.h>
 
 /**
- *
  * listint_len - returns length of a linked list
  *
  * @h: list to get length of
